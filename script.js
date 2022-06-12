@@ -17,7 +17,7 @@ function cipher() {
 
     // Iterate through the user's input and cipher it
     for (let i = 0; i < text.length; i++) {
-        if (text[i].includes(WHITESPACE) == false) {
+        if (text[i].includes(ALPHABET) == false) {
             let position = ALPHABET.indexOf(text[i]);
             let new_position = position + 1;
             new_text += ALPHABET[new_position];
@@ -25,7 +25,8 @@ function cipher() {
             new_text += text[i];
         } else {
             document.getElementById("error"),innerHTML = char_error;
-            return 1;
+            new_text = "";
+            break;
     }
 
     // Convert the ciphered message into all capital letters
@@ -48,7 +49,7 @@ function decipher() {
 
     // Iterate through the user's input and decipher it
     for (let i = 0; i < text.length; i++) {
-        if (text[i].includes(WHITESPACE) == false) {
+        if (text[i].includes(ALPHABET) == false) {
             let position = ALPHABET.indexOf(text[i]);
             let new_position = position - 1;
             new_text += ALPHABET[new_position];
@@ -56,7 +57,8 @@ function decipher() {
             new_text += text[i];
         } else {
             document.getElementById("error"),innerHTML = char_error;
-            return 1;
+            new_text = "";
+            break;
     }
 
     // Output the deciphered version of the user's input

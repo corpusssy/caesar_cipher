@@ -3,6 +3,8 @@ const WHITESPACE = " ";
 
 let random = Math.floor(Math.random() * (SHIFT.length));
 
+let char_error = "This program doesn't take special letters or characters as input.";
+
 // Create a function that ciphers the user's input
 function cipher() {
     
@@ -22,7 +24,7 @@ function cipher() {
         } else if (text[i].includes(WHITESPACE) == true) {
             new_text += text[i];
         } else {
-            document.getElementById("error"),innerHTML = "This program doesn't take special letters or characters as input.";
+            document.getElementById("error"),innerHTML = char_error;
     }
 
     // Convert the ciphered message into all capital letters
@@ -52,7 +54,7 @@ function decipher() {
         } else if (text[i].includes(WHITESPACE) == true) {
             new_text += text[i];
         } else {
-            document.getElementById("error"),innerHTML = "This program doesn't take special letters or characters as input.";
+            document.getElementById("error"),innerHTML = char_error;
     }
 
     // Output the deciphered version of the user's input

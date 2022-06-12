@@ -49,9 +49,10 @@ function decipher() {
             let position = ALPHABET.indexOf(text[i]);
             let new_position = position - 1;
             new_text += ALPHABET[new_position];
-        } else {
+        } else if (text[i].includes(WHITESPACE) == true) {
             new_text += text[i];
-        }
+        } else {
+            document.getElementById("error"),innerHTML = "This program doesn't take special letters or characters as input.";
     }
 
     // Output the deciphered version of the user's input

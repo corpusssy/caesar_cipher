@@ -25,6 +25,7 @@ function cipher() {
             new_text += text[i];
         } else {
             document.getElementById("error"),innerHTML = char_error;
+            return 1;
     }
 
     // Convert the ciphered message into all capital letters
@@ -55,6 +56,7 @@ function decipher() {
             new_text += text[i];
         } else {
             document.getElementById("error"),innerHTML = char_error;
+            return 1;
     }
 
     // Output the deciphered version of the user's input

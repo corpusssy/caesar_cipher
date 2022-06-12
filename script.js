@@ -17,7 +17,7 @@ function cipher() {
 
     // Iterate through the user's input and cipher it
     for (let i = 0; i < text.length; i++) {
-        if (text[i].includes(ALPHABET) == false) {
+        if (text[i].includes(ALPHABET) == true) {
             let position = ALPHABET.indexOf(text[i]);
             let new_position = position + 1;
             new_text += ALPHABET[new_position];
@@ -49,7 +49,7 @@ function decipher() {
 
     // Iterate through the user's input and decipher it
     for (let i = 0; i < text.length; i++) {
-        if (text[i].includes(ALPHABET) == false) {
+        if (text[i].includes(ALPHABET) == true) {
             let position = ALPHABET.indexOf(text[i]);
             let new_position = position - 1;
             new_text += ALPHABET[new_position];
